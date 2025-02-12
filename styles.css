@@ -190,7 +190,7 @@ nav a:hover {
 .header-main-sm-li {
   width: 8px;
   height: 8px;
-  background-image: url(/Images/icons8-linkedin-circled-30.png);
+  background-image: url(./Images/icons8-linkedin-circled-30.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
@@ -198,7 +198,7 @@ nav a:hover {
 .header-main-sm-bs {
   width: 8px;
   height: 8px;
-  background-image: url(/Images/icons8-bluesky-24.png);
+  background-image: url(./Images/icons8-bluesky-24.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
