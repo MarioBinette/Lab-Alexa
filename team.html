@@ -1,77 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Alexa's lab Research</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    
-    <body>
-        <header class="header-main">
-            <div class="header-main-logo">
-                    <img src="./Images/logo-lab-Alexa.png" alt="Logo">
-             </div>
-            <nav>
-              <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="publication.html">PUBLICATION</a></li>
-                <li><a href="news.html">NEWS</a></li>
-                <li><a href="funding.html">FUNDING</a></li>
-                <li><a href="Team.html">TEAM</a></li>
-                <li><a href="nous_joindre.html">CONTACT US</a></li>
-              </ul>
-            </nav>
-                       
-            <div class="header-main-sm">
-                <a href="www.bluesky.com"><div class="header-main-sm-bs"></div></a>
-                <a href="www.linkedin.com"><div class="header-main-sm-li"></div></a>
-            </div>
-    
-            
-        </header>
-         <table class="table-titre">
-            <tr>
-                <td class="td-titre">
-                <h1> TEAM MEMBERS</h1>   
-                </td>
-            </tr>
-            </table>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stable Grid Layout</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
         
-        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
+        p{
+    margin-top: .3em;
+    margin-bottom: .3em;
+    margin-left: 10px;
+    margin-right: 0;}
+      h2 {
+        margin: 0.05em 0;
+        }
+        .position{
+            Position:relative ;
+            width:85%; 
+            left:9%;
+            top:20%;
+            background-color: skyblue; 
+            border-left: 10px; 
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px; 
+            border-bottom-right-radius: 15px;
+            display: flex; /* Use flexbox */
+                align-items: top; /* Align items vertically */
+                gap: 10px; /* Space between image and text */
+                padding: 0px; /* Padding inside the container */
+                margin-bottom: 5px;
+            }
+            .test-content{
+                display:flex;
+                flex-direction: column;
+                align-items: top;
+                
+            }
+            .position:hover{
+                color:red;
+            }
+        .position-ass{
+            Position:relative ;
+            width:70%;
+            left:16%; 
+            top:20%;
+            background-color: skyblue; 
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px; 
+            border-bottom-right-radius: 15px;
+            justify-content: left;
+            display: flex; /* Use flexbox */
+                align-items: top; /* Align items vertically */
+                gap: 10px; /* Space between image and text */
+                padding: 0px; /* Padding inside the container */
+                margin-bottom: 5px;
+            }
+            .test-content-ass{
+                display:flex;
+                flex-direction: column;
+                align-items: top;
+                
+                
+            }
+            .position-ass:hover{
+                color:red;
+            }
+        .img_deg{
+            float: left;
+            width: 300px; /* Adjust the container width as needed */
+            height: 200px; /* Adjust the container height as needed */
+            
+            border-top-left-radius: 15px;
+             border-bottom-left-radius: 15px;
+                    }
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto 6fr;
+                     border: 1px solid black;
+            align-items: start; /* Aligns items to the start of the container */
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            border-top-left-radius: 15PX;
+            border-bottom-left-radius: 15PX;
+        }
+
+        .text-content {
+          border: 1px solid black;
+            border-top-right-radius: 15PX;
+            border-bottom-right-radius: 15PX;
+            line-height: 1; /* Adjust the line height for better readability */
+            display: flex;
+            flex-direction: column;
+            background-color: var(--udm-even-lighter-color);
+            justify-content: center; /* Align text content in the center of the grid item */
+        }
+      @media (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stacks the columns on smaller screens */
+    }
+          .grid-container:hover{
+              color:red;
+          }
+          .position:hover{
+                color:red;
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="bloc-titre">TEAM MEMBERS</div>
+    <div class=position>
+    <img class="img_deg" src="Images/Alexa_P_Binette.jpg">  
+        <div class="test-content">
+            <h2>Alexa Pichet Binette</h2>
+            <p>Assistant Professor, Department of Pharmacology
+                and Physiology, Faculty of Medicine (UdeM)</p> 
+            <p>She obtained her PhD in neuroscience at McGill
+            University and completed her postdoctoral training 
+            at Lund University in Sweden.
+
+            <p>Dr. Pichet Binette is part of the scientific 
+            team of the Quebec Consortium for Early Identification of Alzheimer’s Disease (CIMA-Q) and is also affiliated with the BioFINDER research group at Lund University. She is a member of the scientific program committee of the Alzheimer’s Association International Conference and the executive committee of the Neuroimaging Professional Interest Area.</p>
+            <p>Research interests</p>
+            <p>Alzheimer’s disease | neuroimaging (PET and MRI) | biomarker</p>
+            <p>imaging - Alzeimer Biomarker</p>
+            <p> est-ce que ca va sauter</p>
+        </div>
+        </div>
+    
+    <!--<div class="grid-container">
+        <div class="grid-item">
+            <img src="Images/Alexa_P_Binette.jpg" alt="Image">
+        </div>
+        <div class="grid-item text-content">
+            <p>ALEXA PICHET BINETTE - Lab leader</p>
+            <p>Clémence Peyrot obtained her Ph.D. in psychiatric sciences and addiction at the University of Montreal under the supervision of Dr Marie-France Marin. She studied  fear learning and its regulation based on stress exposure and sex hormonal status. Clémence is passionate about studying memory mechanisms, from normal functioning to pathological alterations. She is also committed to making science accessible to the general public and further developing research on women's health. She is now the clinical research coordinator in the Pichet Binette Lab</p>
+          <p>dwd</p>
+          <p>Line 1: Some text here.</p>
+            <p>Line 2: More text here.</p>
+            <p>Line 3: Even more text here.</p>
+        </div>
+    </div> -->
+    <!-- associates card -->
+    <div class="bloc-titre">ASSOCIATES</div>
+    
+    <section class="grid">
+    <div class=position-ass>
+    <img class="img_deg" src="Images/Clemence.png">  
+        <div class="teSt-content-ass">
+        <h2>Clémence Peyrot</h2>
+    <p>Clémence Peyrot obtained her Ph.D. in psychiatric
+        sciences and addiction at the University of 
+        Montreal under the supervision of Dr Marie-France Marin.
+        She studied  fear learning and its regulation
+        based on stress exposure and sex hormonal status.
+        Clémence is passionate about studying memory mechanisms,
+        from normal functioning to pathological alterations. 
+        She is also committed to making science accessible 
+        to the general public and further developing research
+        on women's health. She is now the clinical research 
+        coordinator in the Pichet Binette LabContact 
+        (clemence.peyrot@umontreal.ca)</p>
+        </div>
+        </div>
+       
+        <div class=position-ass>
+    <img class="img_deg" src="Images/Mario_binette.jpg">  
+        <div class="teSt-content-ass">
+        <h2>Mario Binette</h2>
+    <p>Mario a retired IT professional embraces a 
+        new chapter as a volunteer web master, 
+        combining his tech expertise with a 
+        passion for giving back to the community."</p>
+        </div>
+        </div>
+        </section>
+    <!-- students card -->
+    
+    <div class="bloc-titre">STUDENTS</div>
+        <section class="card-container">
+        <div class="card">
+            <div class="card-image card-photo"></div>
+            <div class="overlay-text">Alexa PICHET</div>
+            <h2>prof</h2>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
             Et at facilisis nunc, nec felis scelerisque.
             Sem id class phasellus eros faucibus sed. 
             Libero varius duis molestie ad egestas convallis mollis
-            feugiat nulla. Molestie condimentum vel vel fermentum
-            leo ipsum ornare. Ligula proin imperdiet tempor consectetur; 
-            ad amet. Ex nec sit semper massa orci parturient. Ridiculus
-            lectus nulla molestie lobortis dui per. Quisque maecenas
-            tellus hendrerit nostra tellus tincidunt.</p>
-    
-        <div class ="team-grid-container">
-            
-            <div class="item-photo">
-            <img src="./Images/Alexa_P_Binette_small.jpg" alt="Alexa P Binette">
-            </div>
-            <div class="item-nom">
-                <p> ALEXA PICHET BINETTE </p>
-            </div>
-            
-            <div class="item-description">
-            <span>Phd in Neurosciene | post Phd at lund university</span>  
-            </div>
-            
-            <div class="item-filler2">
-            </div>
-            
-            <div class="item-descriptionss">
-            <p> short</p> 
-            </div>
-            <div class="item-description1">
-            <p> description blblbl</p> 
-            </div>
-            
+            feugiat nulla. Molestie condimentum vel vel fermentum</p>
+        <a href="">read more</a>
         </div>
-               
-    </body>
+    
+        
+        <div class="card">
+            <div class="card-image card-photo"></div>
+            <div class="overlay-text">cLEMENCE</div>
+            <h2>prof</h2>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
+            Et at facilisis nunc, nec felis scelerisque.
+            Sem id class phasellus eros faucibus sed. 
+            Libero varius duis molestie ad egestas convallis mollis
+            feugiat nulla. Molestie condimentum vel vel fermentum</p>
+        <a href="">read more</a>
+        </div>
+        
+        <div class="card">
+                <div class="card-image"></div>
+                <h2>title</h2>
+                <p>Text</p>
+            </div>
+            </section>
+        <div class="bloc-titre">PARTNERS</div>    
+    <section class="card-container">
+        <div class="card">
+            <div class="card-image card-photo"></div>
+            <div class="overlay-text">PARTNER 1</div>
+            <h2>prof</h2>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
+            Et at facilisis nunc, nec felis scelerisque.
+            Sem id class phasellus eros faucibus sed. 
+            Libero varius duis molestie ad egestas convallis mollis
+            feugiat nulla. Molestie condimentum vel vel fermentum</p>
+        <a href="">read more</a>
+        </div>
+    
+        
+        <div class="card">
+            <div class="card-image card-photo"></div>
+            <div class="overlay-text">PARTNER 2</div>
+            <h2>prof</h2>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
+            Et at facilisis nunc, nec felis scelerisque.
+            Sem id class phasellus eros faucibus sed. 
+            Libero varius duis molestie ad egestas convallis mollis
+            feugiat nulla. Molestie condimentum vel vel fermentum</p>
+        <a href="">read more</a>
+        </div>
+        
+        <div class="card">
+                <div class="card-image"></div>
+                <h2>title</h2>
+                <p>Text</p>
+            </div>
+            </section>
+                
+          
+        <div class="MB">
+            <span>Created by MB</span>
+        </div>
+       
+</body>
 </html>
