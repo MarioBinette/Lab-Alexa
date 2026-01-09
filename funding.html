@@ -7,46 +7,45 @@
     </head>
     <body>
     <div class="wrapper">    
-    <header class="header-main">
-        <div class="header-main-nav">    
-            <nav>
-              <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="research.html">RESEARCH</a></li>
-                <li><a href="team.html">TEAM</a></li>    
-                <li><a href="publication.html">PUBLICATION</a></li>
-                <li><a href="news.html">NEWS</a></li>
-                <li><a href="funding.html">FUNDING</a></li>
-                <li><a href="nous_joindre.html">CONTACT US</a></li>
-                </ul>
-            </nav>
-        </div>      
-            <div class="header-main-sm">
-                <a href="https://bsky.app/profile/alexapb.bsky.social"><div class="header-main-sm-bs"></div></a>
-                <a href="https://www.linkedin.com/in/alexa-pichet-binette-388836b9/?originalSubdomain=ca"><div class="header-main-sm-li"></div></a>
-            </div>
-                    
-        </header>
+    <header>
+    <nav class="navbar">
+  
+  <button class="nav-toggle" aria-label="toggle navigation">
+    ☰
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="research.html">RESEARCH</a></li>
+    <li><a href="team.html">TEAM</a></li>
+    <li><a href="publication.html">PUBLICATION</a></li>
+    <li><a href="news.html">NEWS</a></li>
+    <li><a href="funding.html">FUNDING</a></li>
+    <li><a href="contact.html">CONTACT US</a></li>
+  </ul>
+
+  <a href="https://www.linkedin.com/in/alexa-pichet-binette-388836b9/?originalSubdomain=ca" target="_blank"><div class="header-main-sm-li"></div></a>
+</nav>
+
+        </header> 
         <div class="banner-container">
-            <img src="./Images/header-image.png" alt="Funding">
+            <img src="./Images/funding_banner.jpg" alt="Funding" class="banner-image">
                 <div class="banner-text">FUNDING</div>
         </div>
-        
-        
-        <div class="grid-container">
+     
             <div class="funding-ack">
             <p>We gratefully acknowledge the organizations whose generous support enables our research into Alzheimer’s disease and related neurodegenerative disorders.</p> 
-            <p>remplacer avec la version francaise... the organizations whose generous support enables our research into Alzheimer’s disease and related neurodegenerative disorders.</p> 
+            <p>Nous remercions chaleureusement les organisations dont le soutien généreux rend possible nos recherches sur la maladie d’Alzheimer et les troubles neurodégénératifs apparentés.</p> 
             </div>
-        </div>
+    
               
     <div class="funding-container">
-        <img src="./Images/funding_FRQS.png" alt="frqs">
-        <img src="./Images/logo-figm-fr.svg" alt="IIUGM">
-        <img src="./Images/N3.png">
-        <img src="./Images/funding-logo_unf.jpg">
-        <img src="./Images/Eli_Lilly_and_Company.png">
-        <img src="./Images/udm-large.png" alt="IUGM">
+        <a href="https://frq.gouv.qc.ca/" target="_blank"><div class="funding-img"><img src="./Images/funding_FRQS.png" alt="frqs"></div></a>
+        <a href=" https://www.figm.ca/" target="_blank"><div class="funding-img"><img src="./Images/logo-figm-fr.svg" alt="IIUGM"></div></a>
+        <a href="https://rsn.quebec/" target="_blank"><div class="funding-img"><img src="./Images/N3.png"></div></a>
+        <a href="https://unf-montreal.ca/" target="_blank"><div class="funding-img"><img  src="./Images/funding-logo_unf.jpg"></div></a>
+        <a href="https://www.lilly.com/" target="_blank"><div class="funding-img"><img  src="./Images/Eli_Lilly_and_Company.png"></div></a>
+        <a href="https://www.umontreal.ca/" target="_blank"><div class="funding-img"><img  src="./Images/udm.png" alt="IUGM"></div></a>
     </div>
         
     <footer>
@@ -56,43 +55,36 @@
         </div>
         
         <div>
-            <table> 
-               <tr>
-                   <td>Centre de recherche IUGM</td>
-               </tr> 
-               <tr>
-                   <td>4545 chemin Queen-Mary</td>
-               </tr>
-               <tr> 
-                   <td>Montreal, Quebec</td>
-               </tr>
-                <tr>
-                    <td>Canada H3W 1W5</td>
-               </tr>
-               <tr> 
-                    <td>Office : M6829</td>
-               </tr>
-                <tr> 
-                    <td>Email: 
-                    <a href="mailto:alexa.pichet.binette@umontreal.ca">alexa.pichet.binette@umontreal.ca</a>
-                    </td>
-               </tr>
-            </table> 
-                    
+            <address class="iugm-adr">
+                Centre de recherche IUGM<br>
+                4545 chemin Queen-Mary<br>
+                Office : M6829<br>
+                Montreal, Quebec<br>
+                Canada H3W 1W5<BR>
+            </address>
+            <address class="iugm-adr">
+                <a href="mailto:alexa.pichet.binette@umontreal.ca">
+                    alexa.pichet.binette@umontreal.ca
+                </a>
+            </address>
         </div>
         <div class="footer-contact-img">
             <img src="./Images/iugm-logo9.png" alt="IUGM">
         </div>
     </div> 
     <div class="MB">
-        
         <span class="mb-center">Created by MB</span>
         <span class="mb-left">Version 0.1</span>
     </div>
-      
     </footer>
-        </div>
-    
-       
-    </body>
+    </div>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+        });
+    </script>    
+</body>
 </html>
