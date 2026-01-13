@@ -31,6 +31,7 @@
   --udm_original: rgb(0, 89, 171);
   --udm-lighter-color: rgb(153, 199, 242);
   --udm-even-lighter-color: rgb(204, 229, 255);
+  --udm-orange: rgb(240, 78, 36);
 }
 
 html{
@@ -43,6 +44,7 @@ body {
   height:100%;
   width: 100%;
   margin: 0;
+  
 }
 
 h1 {
@@ -185,12 +187,17 @@ nav a:hover {
 /********************/
 
 .header-main-sm-li {
-  width: 8px;
-  height: 8px;
-  background-image: url(./Images/icons8-linkedin-30-bleu.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkedin-icon {
+  width: 100%;
+  height: 100%;
+  fill: white; 
 }
 
 .header-main-sm-log {
@@ -252,6 +259,54 @@ nav a:hover {
 /*************************/
 /* home page main grid    */
 /************************/
+.top-banner {
+  width: 100%;
+  background-color: var(--udm-orange);
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  animation: slideDown 0.5s ease-out;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9); /* thin line */
+}
+
+.top-banner a {
+  color: white;
+  text-decoration: underline;
+}
+
+.banner-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.banner-close:hover .close-icon circle,
+.banner-close:hover .close-icon line {
+  stroke: #f0f0f0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .home-container {
   display: flex;
   flex-wrap: wrap;     /* allows stacking on small screens */
@@ -480,20 +535,27 @@ nav a:hover {
 @media (max-width: 600px) {
   .link-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
 
   .program-link {
-    padding: 15px;
+    padding: 10px;
   }
 }
 .wrapper {
   min-height: 100%;   /* wrapper fills viewport */
   display: flex;
   flex-direction: column;
+  margin: 0 3px;
+  border-radius: 6px;
+  overflow: hidden;
+
 }
 .wrapper > footer {
   margin-top: auto;   /* pushes footer down */
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
 }
 /*******************************/
 /*       footer                */
@@ -762,7 +824,7 @@ position: relative;
   padding-right: -18px;
   width: 416px;
   height: 170px;
-  background-color: #f04e24; /* Semi-transparent background color */
+  background-color: rgb(240, 78, 36); /* Semi-transparent background color */
   color: white;
   display: flex;
   text-align: left;
@@ -842,12 +904,6 @@ position: relative;
   height:250px;
   margin-bottom: 15px;
   }
-.card-photo-apb{
- background-image: url('./Images/Alexa_P_Binette.jpg');
- border-top-left-radius: 15px; 
- border-top-right-radius: 15px;
-}
-
 
 .card-publication{
   flex: 1 1 calc(30% - 10px);
@@ -976,22 +1032,17 @@ position: relative;
 
 .research-p{
   justify-content:center;
-  margin-left: 123px;
-  margin-right: 123px;
+  margin-left: 3%;
+  margin-right: 3%;
   text-align: center; 
 }
-
-
-
 .flex-item:hover{
   background-color: var(--udm-lighter-color);
   color: var(--udm_original);
   font-weight: bold;
  }
-
 .img-alexa{
   width:300px;
-  
 }
 /* SLIDE SHOW */
 
